@@ -1,0 +1,47 @@
+{% comment %} {% extends 'main.html' %}
+
+{% block content %}
+<h1>Denial-of-Service Threat Detector</h1>
+
+<div>
+    <div>
+        {% for attack in attacks %}
+            <div>
+                {% comment %} <span>@{{attack.host.username}}</span> {% endcomment %}
+                {% comment %} <h5>{{attack.id}} -- <a href="{% url 'attack' attack.id %}">{{attack.attack_name}}</a></h5> {% endcomment %}
+                {% comment %} <small>{{attack.attack_name}}</small> {% endcomment %}
+            {% comment %} </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
+ {% endcomment %}
+
+ {% extends 'main.html' %}
+
+ {% block content %}
+ <style>
+     .home-container{
+         display: grid;
+         grid-template-columns: 1fr 3fr 1fr;
+     }
+ </style>
+ 
+ <div class="home-container">
+     <div>
+         {% include 'base/topics_component.html'%}
+     </div>
+ 
+     <div>
+         <h5>{{room_count}} rooms available</h5>
+         <a href="{% url 'create-room' %}">Check Connection</a>
+         
+         {% include 'base/feed_component.html' %}
+ 
+     </div>
+ 
+ </div>
+ 
+ {% endblock content %}

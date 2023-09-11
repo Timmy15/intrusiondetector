@@ -1,0 +1,22 @@
+<div class="labels">
+    <div class="labels__header">
+      <h2>Browse Searched Connections</h2>
+    </div>
+    <ul class="labels__list">
+      <li>
+        <a href="{% url 'labels' %}" class="active">All <span>{{label_count}}</span></a>
+      </li>
+      {% for label in labels %}
+      <li>
+        <a href="{% url 'dashboard' %}?q={{label}}">{{label}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <a class="btn btn--link" href="{% url 'labels' %}">
+      More
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+        <title>chevron-down</title>
+        <path d="M16 21l-13-13h-3l16 16 16-16h-3l-13 13z"></path>
+      </svg>
+    </a>
+</div>

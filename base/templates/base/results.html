@@ -1,0 +1,82 @@
+{% extends 'auth.html' %}
+
+{% block content %}
+
+    <main class="update-account layout">
+      <div class="container">
+        <!-- Room Start -->
+        <div class="layout__box">
+          <div class="room__top">
+            <div class="layout__boxTitle">
+              <a href="{% url 'dashboard' %}">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <title>arrow-left</title>
+                  <path
+                    d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z"
+                  ></path>
+                </svg>
+              </a>
+              <h3>DOS detector</h3>
+            </div>
+
+
+          </div>
+          <div class="room__box scroll">
+            <div class="room__header scroll">
+              <div class="room__info">
+                <h3>{{ form_instance.label }} is not a DOS Attack</h3>
+                <span></span>
+              </div>
+              <!-- <div class="room__details">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, tenetur laudantium? Dicta repellendus
+                rerum consectetur, voluptatem repudiandae eum ea porro cupiditate provident nulla, deserunt, ab ipsum
+                corporis laboriosam deleniti molestias?
+              </div> -->
+              <span class="room__topics">This may be another kind of intrusion attack, read below to learn more...</span>
+            </div>
+            <div class="room__conversation">
+              <div class="threads scroll">
+                <h3>Understanding Intrusion Attacks</h3>
+                <div class="thread">
+                  <div class="thread__top">
+                    <h3>What is an Intrusion Attack?</h3>
+                  </div>
+                  <div class="thread__details">
+                    
+                    <p class="space-after">Intrusion attacks refer to unauthorized activities where malicious actors attempt to breach a computer system or network. The main aim is often to steal, alter, or destroy data, although sometimes the objective might be to simply cause disruption or scout for vulnerabilities for a future attack.</p>
+                    <h3 class="space-after">Types of Intrusion Attacks:</h3>
+                      <ol class="space-after">
+                        <li>Denial of Service (DoS) and Distributed Denial of Service (DDoS) Attacks: These attacks flood a system with excessive traffic or requests, rendering it unresponsive. A DDoS attack uses multiple systems to launch the attack, making it harder to counteract.</li>
+                        <li>Man-in-the-Middle (MitM) Attacks: Here, the attacker intercepts the communication between two parties, potentially altering the messages before they reach their intended destination.</li>
+                        <li>Phishing and Spear Phishing: These are deceptive techniques where attackers try to trick users into revealing personal information, usually through fake websites or emails.</li>
+                        <li>Password Attack: This involves trying to decode a user's password to gain unauthorized access. Methods can include brute force, dictionary attacks, or keyloggers.</li>
+                        <li>Drive-By Attack: This is when an attacker looks for an insecure website and plants a malicious script into one of its pages, which then runs on users' computers.</li>
+                        <li>Malware and Ransomware: Malicious software or code that can damage or gain unauthorized access to systems. Ransomware, in particular, locks out users from their data until a ransom is paid.</li>
+                      </ol>
+                    <h3 class="space-after">How can you protect yourself?</h3>
+                      <ol class="space-after">
+                        <li>Firewalls: These act as barriers between trusted and untrusted networks, filtering incoming and outgoing traffic based on predetermined policies.</li>
+                        <li>Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS): These monitor network traffic for suspicious activities and can take proactive measures to block or prevent malicious actions.</li>
+                        <li>Regular Software Updates: Keeping software, including operating systems and applications, up-to-date ensures that you are protected against known vulnerabilities.</li>
+                        <li>Educate and Train: Informing employees or users about the risks and signs of intrusion attacks can significantly reduce the chances of successful breaches.</li>
+                        <li>Backup Data Regularly: Regular backups can prevent data loss in case of a successful intrusion attack.</li>
+                        <li>Use Strong, Unique Passwords: Encourage the use of strong passwords and consider using a password manager to keep them safe.</li>
+                      </ol>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Room End -->
+
+        <!--   Start -->
+        
+        <!--  End -->
+      </div>
+    </main>
+    <script src="script.js"></script>
+
+{% endblock content %}

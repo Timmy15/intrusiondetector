@@ -1,0 +1,82 @@
+{% extends 'auth.html' %}
+
+{% block content %}
+
+    <main class="update-account layout">
+      <div class="container">
+        <!-- Room Start -->
+        <div class="layout__box">
+          <div class="room__top">
+            <div class="layout__boxTitle">
+              <a href="{% url 'dashboard' %}">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <title>arrow-left</title>
+                  <path
+                    d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z"
+                  ></path>
+                </svg>
+              </a>
+              <h3>DOS Detector</h3>
+            </div>
+          </div>
+          <div class="room__box scroll">
+            <div class="room__header scroll">
+              <div class="room__info">
+                <h3>Denial-of-Service Attack</h3>
+                <span>Attack Severity Level: HIGH</span>
+              </div>
+              <!-- <div class="room__details">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, tenetur laudantium? Dicta repellendus
+                rerum consectetur, voluptatem repudiandae eum ea porro cupiditate provident nulla, deserunt, ab ipsum
+                corporis laboriosam deleniti molestias?
+              </div> -->
+              <span class="room__topics"><h3>{{ form_instance.label }}</h3> is a DOS Attack !!!</span>
+            </div>
+            <div class="room__conversation">
+              <div class="threads scroll">
+                <h3>What are Denial of Service (DOS) Attacks?</h3>
+                <div class="thread">
+                  <div class="thread__top">
+                    <h3>Attack Description:</h3>
+                  </div>
+                  <div class="thread__details">
+                    
+                    <p class="space-after">Denial-of-Service (DoS) attacks aim to make a machine, network, or service unavailable to its intended users by overwhelming the target with a flood of illegitimate requests. DoS attacks can be launched against any networked device, including web servers, mail servers, and even individual computers. They can cause service disruptions, data loss, and, in some cases, can be leveraged for financial gain through ransom or extortion. Some of the common types of DoS attacks include:</p>
+                      <ul class="space-after">
+                        <li>TCP SYN Flood (Neptune): Overwhelming a target with TCP SYN packets, leaving connections half-open.</li>
+                        <li>UDP Flood: Sending large numbers of UDP packets to random ports on the target system.</li>
+                        <li>Ping of Death: Sending malformed or oversized pings using the ICMP protocol.</li>
+                        <li>Teardrop Attack: Exploiting how a system handles fragmented packets.</li>
+                        <li>Smurf Attack: Exploiting the Internet Control Message Protocol (ICMP) to flood a target with packets.</li>
+                        <li>Mailbomb: Overloading a mail server by sending a large volume of emails.</li>
+                        <li>Process Table Attack: Targeting a system's process table to prevent it from spawning new processes.</li>
+                      </ul>
+                    <h3 class="space-after">Recommended Actions:</h3>
+                      <ol class="space-after">
+                        <li>Implement network monitoring tools to identify sudden spikes or anomalies in traffic.</li>
+                        <li>Deploy Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS) to detect and counteract DoS attack patterns.</li>
+                        <li>Use firewalls to filter out malicious or unexpected traffic types.</li>
+                        <li>Rate limit incoming traffic to ensure the system remains available even under high loads.</li>
+                        <li>Regularly patch and update all software, including operating systems, network devices, and applications.</li>
+                        <li>Backup data and configurations regularly to ensure quick recovery if an attack occurs.</li>
+                        <li>Employ cloud-based DDoS protection services that can mitigate large-scale DoS attacks by dispersing the traffic across a distributed network.</li>
+                        <li>Educate employees, especially network administrators, about the various DoS attack vectors and their prevention mechanisms.</li>
+                      </ol>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Room End -->
+
+        <!--   Start -->
+        
+        <!--  End -->
+      </div>
+    </main>
+    <script src="script.js"></script>
+
+{% endblock content %}
